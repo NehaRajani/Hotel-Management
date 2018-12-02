@@ -1,0 +1,323 @@
+.info{
+    background: hsl(43, 21%, 73%);
+}
+
+.primary-colors{
+    color: rgb(187, 168, 1);
+    font-family: 'Pacifico', cursive;
+}
+
+.info h2{
+    word-spacing: 0.7 rem;
+    font-family: 'Lobster', cursive;
+    color:#440221b7;
+    font-size: 3rem;
+}
+
+.info a{
+    transition: color 1s ease-out;
+}
+
+.info a:hover{
+    color:#242424;
+}
+
+body{
+    font-family: 'Roboto', sans-serif; 
+} 
+small{
+    font-family: 'Pacifico', cursive;
+    color: antiquewhite;
+    font-size: 40px;
+
+}
+
+/*#header*/
+header{
+    min-height: calc(100vh - 94px);
+    background:linear-gradient(rgba(10, 10, 10, 0.5),rgba(0, 0, 0, 0.5)),/*u will get a blur color on image
+    Radial Gradient  it is blur or color combination from middle to outer corbner u can see on w3 schools*/
+    url("../img/2.jfif");
+    background-position: center;
+    background-size: cover; /*in any screen size the img ll alwys cover teh parent size
+    background-attachment: fixed; this ll give parallax effect*/
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.height-90{
+    min-height: calc(100vh - 94px);
+}
+
+.container{
+    display: -webkit-inline-flex;
+    align-content: center;
+    justify-content: flex-start;
+    justify-items: auto;
+    text-justify: auto;
+    -ms-text-justify: distribute;
+    align-content: space-around;
+    position: absolute;
+    top: 3%;
+    left: 8.5%;
+} 
+.banner h1{
+    border-top: 6px dotted #c9c1ac;
+    font-size: 40px;
+    animation: anime4header;
+    animation-duration:2s;
+    animation-delay: 0s;
+    opacity: 0;/*as we dont want text to be shown before  our animation starts*/
+    animation-fill-mode: forwards;/*this is for that animation acc to deafult vanishes that should not soo*/
+}
+.banner h2{
+    border-bottom: 6px dotted #c9c1ac;
+    animation:anime4header2;
+    animation-duration: 2s;
+    animation-delay:2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes anime4header{
+    0% {
+        transform: translateX(190px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-85px); /*u can keep as many stages as u want like o% 50% then 100% we por 3 stages u can use 2 that is 50 50 or n no of stages */
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes anime4header2{
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-75px); /*u can keep as many stages as u want like o% 50% then 100% we por 3 stages u can use 2 that is 50 50 or n no of stages */
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.size{
+    top: 5%;
+    font-size: 70px;
+}
+
+.fony{
+    font-size: 35px;
+}
+.main-btn{
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 3px solid antiquewhite;   /*rgb(187, 168, 1);*/
+    transition: all is ease-in-out;
+    background: #c9c1ac;
+    
+    
+} 
+.main-btn:hover{
+    color: #242424;
+    border: 3px solid #c9c1ac;
+   
+}
+.button{
+    font-family: 'Pacifico', cursive;
+    color: rgb(187, 168, 1);
+    
+}
+.sushi-btn{
+    animation:anime4btn;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    opacity: 0;/*    *as we dont want text to be shown before  our animation starts   */
+    animation-fill-mode: forwards;
+}  
+
+@keyframes anime4btn{
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-100px); /*u can keep as many stages as u want like o% 50% then 100% we por 3 stages u can use 2 that is 50 50 or n no of stages */
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header-link{
+    display: inline-block;
+    color: rgb(187, 168, 1);
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    background: #c9c1ac;
+    border-radius: 10px;
+    transition: all 2s ease;
+    animation: anime4arrow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;/*as this wont stop*/
+
+}
+.header-link:hover {
+    color: #242424;
+}
+
+@keyframes anime4arrow{
+    0%{
+        transform: translateY(-15px);/*transformation is an effect that lets an element change shape, size and position.*/
+       }
+    50%{
+        transform: translateY(15px); /*The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+        u can keep as many stages as u want like o% 50% then 100% we por 3 stages u can use 2 that is 50 50 or n no of stages */
+       }
+    100%{
+        transform: translateY(-15px);
+    }
+}
+/*****************items***********************/
+#special-items{
+    min-height: calc(100vh - 94px);
+    /*background: url("../img/ga.png");*/
+    background: hsl(43, 21%, 73%);
+    background-position: center;
+    background-size: cover; /*in any screen size the img ll alwys cover teh parent size
+    background-attachment: fixed; this ll give parallax effect*/
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.height-0{
+    min-height: calc(100vh - 94px);
+}
+
+.item-container{
+position: relative;/*for the link*/
+overflow: hidden;/* hovering imges we want zoom in over effects meaning *********visible - Default. The overflow is not clipped. It renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible**************/
+background: linear-gradient(rgb(0,0,0),rgb(0,0,0));
+/* gives opacity of 0.5 so becomes transperent and a black back ground to the text on each img*/
+transition: all 2s ease;/*as we hover over img these transitions ll happen*/
+}
+ /*now we want something to happen with an img
+ so in item img class is class that we added actually to the img*/
+.item-img{
+    transition: all 2s ease;
+}
+.item-container:hover .item-img{
+    transform: scale(1.2);  /* transformation is an effect that lets an element change shape, size and position.
+    scale() method increases or decreases the size of an element
+    we used 2D transforms here not 3D both are diff see on w3 schools*/    
+    /* The following example increases the <div> element to be 1 times of its original width, and 2 times of its original height: */
+    opacity: 0.5;/*so img becomes darker********u have values 0.0-0.1*****   where 0.0 becomes lightish blur ie transperent and 1 is 0 transperent ie sharp
+    u can do this wd rgba too by red green blue alpha which gives trasperency not rgb u need rgba**********/
+    transition: all 2s ease;
+}
+
+/*placing link inside img or on img */
+.item-link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);/* so that ll move left as -50%x and -50%y is up 
+    so to make link in center of img we used this by top and left feature it was nt perfect centered */
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border-top: 3px solid rgb(187, 168, 1);
+    border-bottom: 3px solid rgb(187, 168, 1);
+    transition:all 2s ease;
+    /*opacity: 0;*/
+}
+/*as we hover over img ie item containerwe can see the img*/
+.item-container:hover .item-link{
+    opacity: 1;
+}
+/*style as we hover over link on img*/
+.item-link:hover {
+    transition:all 2s ease;
+    border:2px solid #c9c1ac;
+    background: #c9c1ac;
+    color: #242424;
+}
+
+/*hover over img will change style by adding outline to img*/
+.item-container:hover{
+    outline: 5px solid rgb(187, 168, 1);/*A shorthand property for setting outline-width, outline-style, and outline-color in one declaration*/
+    outline-offset: 0.8rem; /*The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.*/
+}
+
+
+/******  roomss*******/
+#menu{
+    background-color:   #c9c1ac;
+    color:  rgb(187, 168, 1);
+    padding :15px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
